@@ -1,7 +1,6 @@
 "use client";
 
-/* eslint-disable @next/next/no-img-element */
-
+import Image from "next/image";
 import { useState } from "react";
 import { NAV_LINKS } from "@/data/navigation";
 
@@ -15,19 +14,25 @@ export default function Navbar(): JSX.Element {
       <div className="relative z-50 mx-auto flex h-11 w-full max-w-[375px] items-end justify-between px-10 pb-2.5 text-[15.858px] font-semibold leading-none text-[#292929] xl:hidden">
         <span>9:41</span>
         <div className="flex w-[66px] items-center justify-end gap-[5px]" aria-hidden="true">
-          <img
+          <Image
             src="/assets/images/cellular.svg"
             alt=""
+            width={18}
+            height={12}
             className="h-[11.405px] w-[17.91px]"
           />
-          <img
+          <Image
             src="/assets/images/wifi.svg"
             alt=""
+            width={16}
+            height={12}
             className="h-[11.5px] w-[15.99px]"
           />
-          <img
+          <Image
             src="/assets/images/battery.svg"
             alt=""
+            width={26}
+            height={13}
             className="h-[12.127px] w-[25.493px]"
           />
         </div>
@@ -55,8 +60,22 @@ export default function Navbar(): JSX.Element {
         </ul>
 
         <a href="#home" className="flex h-14 items-center justify-start gap-2.5 rounded-pill pl-2 pr-4 xl:h-[86px] xl:w-[307px] xl:justify-center xl:px-10">
-          <img src="/assets/images/logo-mark.svg" alt="" className="h-8 w-8 xl:h-[46px] xl:w-[46px]" />
-          <img src="/assets/images/logo-type.svg" alt="JCREA" className="h-auto w-[70px] xl:w-[82.5px]" />
+          <Image
+            src="/assets/images/logo-mark.svg"
+            alt=""
+            width={46}
+            height={46}
+            priority
+            className="h-8 w-8 xl:h-[46px] xl:w-[46px]"
+          />
+          <Image
+            src="/assets/images/logo-type.svg"
+            alt="JCREA"
+            width={83}
+            height={20}
+            priority
+            className="h-auto w-[70px] xl:w-[82.5px]"
+          />
         </a>
 
         <ul className="hidden items-center justify-end xl:flex">

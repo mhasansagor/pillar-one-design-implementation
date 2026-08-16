@@ -1,4 +1,4 @@
-/* eslint-disable @next/next/no-img-element */
+import Image from "next/image";
 
 export default function Hero(): JSX.Element {
   return (
@@ -8,7 +8,15 @@ export default function Hero(): JSX.Element {
     >
       <div className="absolute left-1/2 top-[37px] z-30 flex h-[45px] -translate-x-1/2 items-center justify-center rounded-pill border border-ink bg-white/10 px-[25px] text-xs font-medium leading-none text-ink xl:text-xl">
         <span>Hello!</span>
-        <img src="/assets/images/hello-mark.svg" alt="" className="absolute -right-7 -top-4 h-[29px] w-[28px]" />
+        <span aria-hidden="true" className="absolute -right-7 -top-4 block h-[28.5px] w-[27.5px]">
+          <Image
+            src="/assets/images/hello-mark.svg"
+            alt=""
+            fill
+            sizes="28px"
+            className="object-fill"
+          />
+        </span>
       </div>
 
       <div className="absolute left-1/2 top-[111px] z-20 w-full max-w-[375px] -translate-x-1/2 text-center xl:w-[913px] xl:max-w-none">
@@ -16,12 +24,36 @@ export default function Hero(): JSX.Element {
           I&apos;m <span className="text-accent">Jenny</span>,
           <br />
           Product Designer
-          <img src="/assets/images/headline-mark.svg" alt="" className="absolute left-[-23px] top-[170px] hidden h-[88px] w-[86px] rotate-[-167.61deg] xl:block" />
+          <span aria-hidden="true" className="absolute left-[28px] top-[166px] hidden h-[74.5px] w-[71.89px] rotate-[-167.61deg] xl:block">
+            <Image
+              src="/assets/images/headline-mark.svg"
+              alt=""
+              fill
+              sizes="86px"
+              className="object-fill"
+            />
+          </span>
         </h1>
       </div>
 
+      <span aria-hidden="true" className="absolute left-[41px] top-[168px] z-20 block h-[33.15px] w-[31.99px] rotate-[-167.61deg] xl:hidden">
+        <Image
+          src="/assets/images/headline-mark.svg"
+          alt=""
+          fill
+          sizes="38px"
+          className="object-fill"
+        />
+      </span>
+
       <blockquote className="absolute left-4 top-[223px] z-30 max-w-[163px] xl:left-[71px] xl:top-[373px] xl:max-w-[298px]">
-        <img src="/assets/images/quote.svg" alt="" className="mb-2 h-6 w-6 xl:mb-6 xl:h-9 xl:w-9" />
+        <Image
+          src="/assets/images/quote.svg"
+          alt=""
+          width={36}
+          height={36}
+          className="mb-2 h-6 w-6 xl:mb-6 xl:h-9 xl:w-9"
+        />
         <p className="text-[11px] font-medium leading-[1.28] tracking-normal text-muted xl:text-xl xl:leading-normal">
           Jenny&apos;s Exceptional product design
           <span className="hidden xl:inline">
@@ -37,7 +69,14 @@ export default function Hero(): JSX.Element {
       <div className="absolute right-4 top-[226px] z-30 text-right xl:right-[71px] xl:top-[380px]">
         <div aria-label="5 out of 5 stars" className="mb-1 flex justify-end xl:mb-[21px]">
           {Array.from({ length: 5 }).map((_, index) => (
-            <img key={index} src="/assets/images/star.svg" alt="" className="h-[18.2px] w-[18.2px] xl:h-8 xl:w-8" />
+            <Image
+              key={index}
+              src="/assets/images/star.svg"
+              alt=""
+              width={32}
+              height={32}
+              className="h-[18.2px] w-[18.2px] xl:h-8 xl:w-8"
+            />
           ))}
         </div>
         <p className="font-display text-xl font-bold leading-none tracking-normal xl:text-[47px]">
@@ -47,21 +86,25 @@ export default function Hero(): JSX.Element {
       </div>
 
       <div className="absolute left-1/2 top-[278px] z-30 h-[261px] w-[375px] -translate-x-1/2 xl:top-[210px] xl:h-[636px] xl:w-[952px]">
-        <img src="/assets/images/ellipse.svg" alt="" className="absolute left-[21px] top-[94px] z-0 h-[167px] w-[333px] xl:left-[83px] xl:top-[230px] xl:h-[406px] xl:w-[812px]" />
-        <img
-          src="/assets/images/portrait.png"
-          alt="Jenny smiling in an orange jacket"
-          className="absolute left-4 top-0 z-10 h-[261px] w-[343px] max-w-none object-cover xl:left-0 xl:h-[636px] xl:w-[952px]"
-        />
-        <div className="absolute bottom-[5.42px] left-[147.28px] z-20 flex h-[33.651px] w-[134.61px] items-center justify-center gap-[4.104px] rounded-pill bg-white/10 p-[4.104px] xl:hidden">
-          <a href="#project" className="flex h-full w-[85.358px] items-center justify-center rounded-pill border border-line bg-accent px-[8.208px] py-[4.104px] text-[10.54px] font-medium leading-none tracking-normal text-white">
-            Portfolio
-            <img src="/assets/images/arrow-up-right.svg" alt="" className="h-[17.236px] w-[17.236px]" />
-          </a>
-          <a href="#contact" className="flex h-full flex-1 items-center justify-center rounded-pill px-[8.208px] py-[4.104px] text-[10.54px] font-light leading-none tracking-normal text-white">
-            Hire me
-          </a>
-        </div>
+        <span aria-hidden="true" className="absolute left-[21px] top-[94px] z-0 block h-[167px] w-[333px] xl:left-[83px] xl:top-[230px] xl:h-[406px] xl:w-[812px]">
+          <Image
+            src="/assets/images/ellipse.svg"
+            alt=""
+            fill
+            sizes="(min-width: 1280px) 812px, 333px"
+            className="object-fill"
+          />
+        </span>
+        <span className="absolute left-4 top-0 z-10 block h-[261px] w-[343px] max-w-none xl:left-0 xl:h-[636px] xl:w-[952px]">
+          <Image
+            src="/assets/images/portrait.png"
+            alt="Jenny smiling in an orange jacket"
+            fill
+            priority
+            sizes="(min-width: 1280px) 952px, 343px"
+            className="object-cover"
+          />
+        </span>
       </div>
     </section>
   );

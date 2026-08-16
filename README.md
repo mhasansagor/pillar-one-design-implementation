@@ -107,9 +107,9 @@ npm.cmd run lint
 npm.cmd run build
 ```
 
-Lint passes with no warnings. Figma-exported visual assets use fixed-size
-`<img>` elements for pixel fidelity, with the Next image lint rule disabled only
-inside those presentation components.
+Lint passes with no warnings. Figma-exported visual assets are rendered with
+`next/image` using explicit dimensions or fixed wrappers so the original sizing,
+cropping, and absolute positioning remain intact.
 
 ## Notes
 
