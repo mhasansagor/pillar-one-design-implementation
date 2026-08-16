@@ -9,11 +9,11 @@ export default function Services(): JSX.Element {
     >
       <div
         aria-hidden="true"
-        className="absolute -left-[50px] top-[197px] h-[133px] w-[130px] rotate-[151.66deg] bg-[url('/assets/images/orange-abstract.png')] bg-cover opacity-90 blur-[1.5px] xl:-left-[149px] xl:top-[140px] xl:h-[442px] xl:w-[432px]"
+        className="absolute -left-[50px] top-[132px] h-[133px] w-[130px] rotate-[151.66deg] bg-[url('/assets/images/orange-abstract.png')] bg-cover opacity-90 blur-[1.5px] xl:-left-[149px] xl:top-[140px] xl:h-[441.9px] xl:w-[432.33px]"
       />
       <div
         aria-hidden="true"
-        className="absolute left-[289px] top-[176px] h-[84px] w-[84px] rotate-[-146.4deg] bg-[url('/assets/images/orange-abstract.png')] bg-cover blur-[2.5px] xl:left-[527px] xl:top-[121px] xl:h-[181px] xl:w-[181px]"
+        className="absolute left-[305px] top-[146px] h-[84px] w-[84px] rotate-[-146.4deg] bg-[url('/assets/images/orange-abstract.png')] bg-cover blur-[2.5px] xl:left-[527px] xl:top-[121px] xl:h-[180.95px] xl:w-[180.95px]"
       />
       <div
         aria-hidden="true"
