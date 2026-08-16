@@ -4,7 +4,7 @@ import Services from "@/components/Services";
 
 export default function Home(): JSX.Element {
   return (
-    <main className="pb-10">
+    <main className="overflow-x-hidden pb-10">
       <Navbar />
       <Hero />
       <Services />

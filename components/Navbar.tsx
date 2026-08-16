@@ -1,16 +1,9 @@
 "use client";
 
-import { useState } from "react";
-import type { NavLink } from "./types";
+/* eslint-disable @next/next/no-img-element */
 
-const NAV_LINKS: NavLink[] = [
-  { label: "Home", href: "#home", active: true },
-  { label: "About", href: "#about" },
-  { label: "Service", href: "#service" },
-  { label: "Resume", href: "#resume" },
-  { label: "Project", href: "#project" },
-  { label: "Contact", href: "#contact" },
-];
+import { useState } from "react";
+import { NAV_LINKS } from "@/data/navigation";
 
 export default function Navbar(): JSX.Element {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -18,7 +11,28 @@ export default function Navbar(): JSX.Element {
   const rightLinks = NAV_LINKS.slice(3);
 
   return (
-    <header className="relative z-50 mx-auto mt-[65px] w-[calc(100%_-_32px)] max-w-[720px] xl:mt-10 xl:max-w-[1298px]">
+    <>
+      <div className="relative z-50 mx-auto flex h-11 w-full max-w-[375px] items-end justify-between px-10 pb-2.5 text-[15.858px] font-semibold leading-none text-[#292929] xl:hidden">
+        <span>9:41</span>
+        <div className="flex w-[66px] items-center justify-end gap-[5px]" aria-hidden="true">
+          <img
+            src="/assets/images/cellular.svg"
+            alt=""
+            className="h-[11.405px] w-[17.91px]"
+          />
+          <img
+            src="/assets/images/wifi.svg"
+            alt=""
+            className="h-[11.5px] w-[15.99px]"
+          />
+          <img
+            src="/assets/images/battery.svg"
+            alt=""
+            className="h-[12.127px] w-[25.493px]"
+          />
+        </div>
+      </div>
+      <header className="relative z-50 mx-auto mt-[21px] w-[343px] max-w-[calc(100%_-_32px)] xl:mt-10 xl:w-[1298px] xl:max-w-[1298px]">
       <nav
         aria-label="Primary"
         className="grid h-14 grid-cols-[auto_auto] items-center justify-between rounded-pill border border-white bg-ink px-2 text-white shadow-[0_6px_12px_rgba(0,0,0,0.18)] backdrop-blur-[7.5px] xl:h-[86px] xl:grid-cols-[1fr_auto_1fr] xl:px-2.5"
@@ -41,8 +55,8 @@ export default function Navbar(): JSX.Element {
         </ul>
 
         <a href="#home" className="flex h-14 items-center justify-start gap-2.5 rounded-pill pl-2 pr-4 xl:h-[86px] xl:w-[307px] xl:justify-center xl:px-10">
-          <img src="/assets/figma/logo-mark.svg" alt="" className="h-8 w-8 xl:h-[46px] xl:w-[46px]" />
-          <img src="/assets/figma/logo-type.svg" alt="JCREA" className="h-auto w-[70px] xl:w-[82.5px]" />
+          <img src="/assets/images/logo-mark.svg" alt="" className="h-8 w-8 xl:h-[46px] xl:w-[46px]" />
+          <img src="/assets/images/logo-type.svg" alt="JCREA" className="h-auto w-[70px] xl:w-[82.5px]" />
         </a>
 
         <ul className="hidden items-center justify-end xl:flex">
@@ -112,6 +126,7 @@ export default function Navbar(): JSX.Element {
           ))}
         </ul>
       </div>
-    </header>
+      </header>
+    </>
   );
 }
